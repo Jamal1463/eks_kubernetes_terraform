@@ -4,6 +4,12 @@ resource "aws_s3_bucket" "enterprise_backend_state" {
   lifecycle {
     prevent_destroy = true
   }
+
+tags = {
+    Name        = "Terraform State Bucket"
+    Environment = "Dev"
+  }
+
 }
 
 resource "aws_s3_bucket_versioning" "versioning_example" {
