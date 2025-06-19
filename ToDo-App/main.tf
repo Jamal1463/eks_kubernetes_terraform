@@ -23,18 +23,6 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "example" {
   }
 }
 
-terraform {
-  backend "s3" {
-    bucket = "eks-terra-bucket-098498"
-    key    = "backend/ToDo-App.tfstate"
-    region = "us-east-1"
-    encrypt        = true
-  #  dynamodb_table = "dynamoDB-terra"
-    use_lockfile = true
-  }
-}
-
-
 # create VPC
 module "VPC" {
   source           = "../modules/vpc"
