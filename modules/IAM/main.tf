@@ -1,3 +1,8 @@
+# Create an IAM USER
+resource "aws_iam_user" "eks_iam_user" {
+  name = "eks-terraform-test-user01"
+}
+
 # aws_iam_role.cluster-ServiceRole will be created
   resource "aws_iam_role" "eks_cluster_iam_role" {
         # The name of the role
