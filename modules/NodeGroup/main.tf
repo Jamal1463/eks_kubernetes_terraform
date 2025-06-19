@@ -53,5 +53,5 @@ resource "aws_eks_node_group" "node_group" {
   }
 
   # Kubernetes version
-  version = "1.27"
+  version = "1.32"
 }
