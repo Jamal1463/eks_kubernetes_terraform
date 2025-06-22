@@ -1,5 +1,5 @@
 #create S3 bucket
-resource "aws_s3_bucket" "enterprise_backend_state" {
+resource "aws_s3_bucket" "terraform_bucket" {
   bucket = "eks-terra-bucket-098498"
 
   lifecycle {
@@ -8,14 +8,14 @@ resource "aws_s3_bucket" "enterprise_backend_state" {
 }
 
 resource "aws_s3_bucket_versioning" "versioning_example" {
-  bucket = aws_s3_bucket.enterprise_backend_state.id
+  bucket = aws_s3_bucket.terraform_bucket.id
   versioning_configuration {
     status = "Enabled"
   }
 }
 
 resource "aws_s3_bucket_server_side_encryption_configuration" "example" {
-  bucket = aws_s3_bucket.enterprise_backend_state.bucket
+  bucket = aws_s3_bucket.terraform_bucket.bucket
 
   rule {
     apply_server_side_encryption_by_default {
