@@ -1,5 +1,6 @@
+/*
 resource "aws_s3_bucket" "terraform_bucket" {
-#  bucket = "eks-terra-bucket-098498"
+  bucket = "eks-terra-bucket-098498"
 
   lifecycle {
     prevent_destroy = false
@@ -22,7 +23,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "example" {
     }
   }
 }
-
+*/
 # create VPC
 module "VPC" {
   source           = "../modules/vpc"

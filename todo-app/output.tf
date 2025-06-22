@@ -1,4 +1,5 @@
 # Creating Output's
+/*
 output "bucket_name" {
   description = "The name of the S3 bucket"
   value       = aws_s3_bucket.terraform_bucket.bucket
@@ -16,3 +17,4 @@ output "terraform_bucket_versioning"{
 output "terraform_bucket_complete_details" {
     value = aws_s3_bucket.terraform_bucket
 }
+*/
