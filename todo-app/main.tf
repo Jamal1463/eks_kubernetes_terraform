@@ -1,6 +1,5 @@
-#create S3 bucket
 resource "aws_s3_bucket" "terraform_bucket" {
-  bucket = "eks-terra-bucket-098498"
+#  bucket = "eks-terra-bucket-098498"
 
   lifecycle {
     prevent_destroy = true
