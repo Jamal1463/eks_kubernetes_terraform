@@ -2,7 +2,7 @@ resource "aws_s3_bucket" "terraform_bucket" {
 #  bucket = "eks-terra-bucket-098498"
 
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false
   }
 }
 
